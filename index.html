@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miyu 語録</title>
+    <style>
+        /* body { */
+  /* 画像ファイルの指定 */
+  /* background-image: url(back.png); */
+/* background-image: url(miyu_manga.jpg); */
+
+  /* 画像を常に天地左右の中央に配置 */
+/* background-position: center center; */
+
+  /* 画像をタイル状に繰り返し表示しない */
+/* background-repeat: no-repeat; */
+
+  /* コンテンツの高さが画像の高さより大きい時、動かないように固定 */
+/* background-attachment: fixed; */
+
+  /* 表示するコンテナの大きさに基づいて、背景画像を調整 */
+/* background-size: cover; */
+
+  /* 背景画像が読み込まれる前に表示される背景のカラー */
+/* background-color: #464646; */
+
+}
+
+/* @media only screen and (max-width: 1500px {
+    body {
+        background-image: url(back.png);
+/* 画像を常に天地左右の中央に配置 */
+        /* background-position: center center; */
+
+  /* 画像をタイル状に繰り返し表示しない */
+        /* background-repeat: no-repeat; */
+
+  /* コンテンツの高さが画像の高さより大きい時、動かないように固定 */
+        /* background-attachment: fixed; */
+
+  /* 表示するコンテナの大きさに基づいて、背景画像を調整 */
+        /* background-size: cover; */
+
+  /* 背景画像が読み込まれる前に表示される背景のカラー */
+        /* background-color: #464646; */
+    }
+} 
+
+h1{
+    color: black;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* align-content: center; */
+    text-align: center;
+    font-size: 50px;
+
+}
+
+.c-menu {
+    display: flex;
+}
+
+.c-menu__item {
+    list-style: none;
+}
+
+.c-menu__link {
+    border: 1px solid #dddddd;
+    color: black;
+    padding: 10px 40px;
+    text-decoration: none;
+}
+
+.c-space {
+    height: auto;
+}
+
+.c-content {
+    /* align-items: center; */
+    /* align-content: center; */
+    border-top: 1px solid #dddddd;
+    display: flex;
+    height: auto;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: black;
+    font-size: 50px;
+}
+
+/* .background {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-image: url(back.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+} */
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-image: url(back.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+body {
+    width: 100%;
+    height: 100%;
+    background-image: url(back.png);
+    background-repeat: no-repeat;
+background-size: 100% 100%;
+}
+.filter {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+}
+    </style>
+</head>
+<body>
+    <!-- <ul class="c-menu">
+        <li class="c-menu__item">
+        <a class="c-menu__link" href="#link01">link01</a>
+        </li>
+        <li class="c-menu__item">
+        <a class="c-menu__link" href="#link02">link02</a>
+        </li>
+        <li class="c-menu__item">
+        <a class="c-menu__link" href="#link03">link03</a>
+        </li>
+    </ul> -->
+
+    <h1>Miyuの名言/迷言【定期】</h1>
+    <div class="c-space"></div>
+        <div id="link03" class="c-content"><br>【定期】この配信は乾杯8割みゆ虐2割でお送り致しております。</div>
+        <div id="link03" class="c-content"><br>【定期】ごめんねはもりよってるのて、配信オスへたす、</div>
+        <div id="link03" class="c-content"><br>【定期】この配信は乾杯5割、みゆ虐3割、みゆへの愛情2割でお送り致しております。</div>
+        <div id="link03" class="c-content"><br>【定期】ドリンクだと思えば何でもOk</div>
+        <div id="link03" class="c-content"><br></div>
+        <div id="link03" class="c-content"><br></div>
+        <div id="link03" class="c-content"><br></div>
+        <div id="link03" class="c-content"><br></div>
+        <div id="link03" class="c-content"><br></div>
+        <div id="link03" class="c-content"><br></div>
+        <!-- <div id="link03" class="c-content"><br>link03のコンテンツ</div>
+        <div id="link03" class="c-content"><br>link03のコンテンツ</div>
+        <div id="link03" class="c-content"><br>link03のコンテンツ</div>
+        <div id="link03" class="c-content"><br>link03のコンテンツ</div>
+        <div id="link03" class="c-content"><br>link03のコンテンツ</div> -->
+    <div class="c-space"></div>
+
+    <script>
+        const scorrllLinks = document.querySelectorAll('a[href^="#"]');
+        scorrllLinks.forEach((scorrllLink) => {
+        scorrllLink.addEventListener("click", (e) => {
+            e.preventDefault();
+            const hrefLink = scorrllLink.getAttribute("href");
+            const targetContent = document.getElementById(hrefLink.replace("#", ""));
+            const rectTop = targetContent.getBoundingClientRect().top;
+            const positionY = window.pageYOffset;
+            const target = rectTop + positionY;
+            window.scrollTo({
+            top: target,
+            behavior: "smooth",
+            });
+        });
+        });
+    </script>
+</body>
+</html>
